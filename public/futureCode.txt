@@ -1,0 +1,26 @@
+useEffect(() => {
+        const applyEffect = () =>{
+            button.current.classList.add('effect-container');
+        };
+        const applyStyles = (e) => {
+            const {offsetX, offsetY} = e;
+            const {style} = button.current;
+            const sizeOffset = 50;
+
+            style.setProperty("--effect-top", `${offsetY - sizeOffset}px`);
+            style.setProperty("--effect-left ", `${offsetX - sizeOffset}px`);
+
+        }
+        const onClick = (e) => {
+            button.current.classList.remove('active');
+            applyStyles(e);
+            button.current.classList.add('active');
+        }
+
+        applyEffect();
+        button.current.addEventListener("mouseup", onclick);
+        const cleanEffect = button.current;
+        return () => {
+            cleanEffect.removeEventListener("mouseup", onclick)
+        }
+}, [])

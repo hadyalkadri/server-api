@@ -1,0 +1,509 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-white: #fff;
+}
+
+html{
+    /* you gotta figure these later on */
+    scroll-behavior: smooth;
+    /* scroll-padding: 75px; */
+}
+body{
+    font-weight: 400px;
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+    background: linear-gradient(to right, darkred, #00AAFF);
+    color: white;
+    height: 100vh;
+    width: 100vw;
+
+}  
+
+/* .main-section{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+} */
+
+#navbar-custom{
+    z-index: 2;
+    background: linear-gradient(to right, darkred, #00AAFF)!important; 
+}
+
+/*we added this to make the links not jump when we hover over the navbar */
+.navbar-nav > li > a {
+    border-top: 3px solid transparent;
+
+}
+
+.navbar-nav > li > a.active, .navbar-nav > li > a:hover {
+    border-top: 3px solid var(--primary-white);
+
+
+}
+
+.skills_link{
+    text-decoration: none;
+    color: lightgray!important;
+    filter: opacity(0.7)!important;
+}
+
+
+
+.header-container{
+    background: linear-gradient(to right, darkred, #00AAFF);
+    background-size: contain;
+    background-position: center;    
+    height: 100vh;
+    width: 100%;
+    padding-top: 0px;
+    /* margin-top: -500px; */
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    overflow-x: hidden;
+ 
+}
+
+.header-intro{
+    display: flex;
+    /* position: absolute; */
+    left: 0;
+    right: 0;
+    padding-top: 180px;
+    /* top:  this property is blocking the hover effect in the navbar */
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    height: 100vh; 
+    scroll-snap-align: start;
+}
+
+.header-intro > h1 {
+    color: white;
+    font-style: italic;
+}
+
+.typed-text {
+    margin-top: 15px;
+    font-size: 24px;
+}
+
+.viewme-btn{
+    /*this is was absolute*/
+    position: relative;
+    /*the left was 45.5%*/
+    left: 5px;
+    bottom: 55%;
+    text-decoration: none;
+    width: 120px;
+    font-size: 12px;
+    font-weight: bold;
+    border: 1px solid darkred;
+    padding: 0.9375em 2.1875em;
+    border-radius: 20px;
+    margin-top: 290px;
+    color: whitesmoke;
+    background-color: darkred;
+    transition: 0.7s ease;
+
+}
+.viewme-btn:hover{
+    background-color: whitesmoke;
+    color: darkred;
+    transform: scale(1.1);
+    font-weight: bolder;
+    
+}
+
+.about{
+    /* the positions was aboslute*/
+    scroll-snap-align: start;
+    /* position: absolute; */
+    height: 100vh;
+    width: 100vw;
+}
+
+.about-me{
+    background-color: #0F1922;
+  
+    /* padding: 20px; */
+    /* position: absolute; */
+    /* top: 40rem; */
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 600px;
+    gap: 20px;
+    grid-template-areas: 
+    "leftArea rightArea"
+    ;
+    z-index: 2;
+
+}
+
+/* .grid-item{
+    width: 100%;
+    height: 100%;
+} */
+
+.about-image{
+    height: 100%;
+    width: 38.75rem;
+    object-fit: cover;
+}
+
+.about-title{
+    text-align: center;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to right, gray, #00AAFF);
+}
+
+.about-details{
+    margin-top: 70px;
+}
+
+.grid-item-1{
+    grid-area: leftArea;
+    z-index: 1;
+}
+.grid-item-2{
+    grid-area: rightArea;
+    padding: 40px;
+    margin-top: 10rem;
+    opacity: 0.8;
+}
+
+.nav-link {
+    margin-bottom: 10px;
+}
+
+#tsparticles{
+    z-index: 1;
+}
+
+.cardConatiner{
+    position: relative;
+    /* top: 700px; */
+    top: 100px;
+    right: 3%;
+    padding-left: 28rem;
+    margin-bottom: 10rem;  
+}
+
+.skillsHd{
+    font-size: 5rem;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-image:  linear-gradient(to right, gray, #00AAFF);
+    display: inline-block;
+    position: relative;
+    bottom: 40px;
+    left: 95px;
+}
+
+.Card{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    opacity: 65%;
+    background-color: #167AD5;
+    text-align: center;
+    padding: 10px;
+    width: 22rem;
+    height: 12rem;
+    border: 1px solid white;
+    border-radius: 20px;
+    margin: 20px;
+    color: #fff;
+    justify-content: center;
+    
+}
+
+.Card:hover{
+    box-shadow: 0 5px 10px 0  rgba(0, 0, 0, 2);
+    transform: scale(110%);
+    transition: 0.2s;
+}
+
+.Card > p{
+    margin-top: 37px;
+    background-color: darkblue;
+    width: 14rem;
+    margin: auto;
+
+
+}
+
+.btn{
+    position: absolute;
+    
+}
+
+.container{
+    
+}
+
+.exCard{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 400px;
+    gap: 20px;
+    grid-template-areas: 
+    "rightArea  leftArea"
+    "rightArea1 leftArea1"
+    "rightArea2 leftArea2"
+    ;
+
+}
+
+.expImages{
+    height: 200px;
+    width: 400px;
+    box-shadow: 2px 2px 10px 1px black;
+    transition: 500ms;
+    border-radius: 10px;
+}
+
+.expImages:hover{   
+    transform: scale(1.1);
+    transition: 500ms;
+    height: 200px;
+    width: 400px;
+    box-shadow: 2px 2px 10px 1px black;
+    border-radius: 20px;
+}
+
+.grid-item1{
+    grid-area: rightArea;
+    position: relative;
+    right: 105%;
+    top: 13rem;
+}
+
+.grid-item1a{
+    grid-area: leftArea;
+    height: 400px;
+}
+
+.grid-item2{
+    grid-area: leftArea1;
+    position: relative;
+    left: 112%;
+    top: 13.5rem;
+
+}
+
+.grid-item2a{
+    grid-area: rightArea1;
+    height: 400px;
+}
+
+.grid-item3{
+    grid-area: rightArea2;
+    position: relative;
+    right: 105%;
+    top: 11.5rem;
+}
+
+.grid-item3a{
+    grid-area: leftArea2;
+    height: 400px;
+}
+
+/* .expHeader{
+    width: 400px;
+} */
+
+.expHeader{
+    width: 400px;
+    filter: grayscale(80%);
+    background-image: linear-gradient(
+        -225deg,
+        #231557 0%,
+        #44107a 29%,
+        #ff1361 67%,
+        #fff800 100%
+      );
+      background-size: auto auto;
+      background-clip: border-box;
+      background-size: 200% auto;
+      color: #fff;
+      background-clip: text;
+      -wbekit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: textclip 2s linear infinite;
+      display: inline-block;
+          font-size: 40px;
+}
+
+@keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
+  }
+
+.footer{
+    display: flex;
+    padding: 10px;
+    /* margin-top: 100px; */
+    justify-content: center;
+    background-color: #0F1922;
+}
+
+.footerSkills{
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+}
+
+.footerExperience{
+    display: flex;
+    padding: 10px;
+    position: relative;
+    bottom: -500px;
+    justify-content: center;
+}
+
+.icons{
+    margin-right: 20px;
+    color: white;
+}
+
+
+@media screen and (max-width: 390px) {
+    /* header intro */
+    .header-intro{
+        display: flex;
+        /* padding-top: 90px; */
+        height: 100vh;
+        position: relative;
+        bottom: 300px;
+    }
+    .viewme-btn{
+        position: relative;
+        top: 55px;
+        margin-top: 0px;
+    }
+
+    /* header about */
+    .about{
+       width: 100%;
+       height: 100vh;
+    }
+
+    .about-me{
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .grid-item-2{
+        margin-top: 0;
+    }
+
+    .about-details{
+        font-size: 12px;
+        padding-bottom: 130px;
+    }
+
+    .about-image{
+        width: 100%;
+        object-fit: contain;
+    }
+
+    /*skills*/
+
+    .main-section{
+        width: 100vw;
+    }
+
+    .cardConatiner{
+        height: 100%;
+        margin-bottom: 360px;
+    }
+
+    .skillsHd{
+        font-size: 5rem;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-image:  linear-gradient(to right, gray, #00AAFF);
+        /* display: inline-block; */
+        position: relative!important;
+        left: -320px;
+        bottom: 40px;
+    }
+
+    .Card{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        opacity: 65%;
+        background-color: #167AD5;
+        text-align: center;
+        padding: 10px;
+        width: 22rem;
+        height: 12rem;
+        border: 1px solid white;
+        border-radius: 20px;
+        margin: 20px;
+        color: #fff;
+        justify-content: center;
+        position: relative;
+        right: 430px;
+        
+    }
+
+    /* experience */
+    .exCard{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    
+    }
+
+    .expImages{
+        height: 150px;
+        width: 300px;
+        box-shadow: 2px 2px 10px 1px black;
+        transition: 500ms;
+        border-radius: 10px;
+    }
+
+    /* image 1 */
+
+    .grid-item1{
+        position: relative;
+        left: 20px;
+        top: -5px;
+ 
+    }
+
+    /* image 2 */
+
+    .grid-item2{
+        position: relative;
+        left: 20px;
+        top: -3px;
+    
+    }
+
+    /* footer */
+    .footer{
+        display: fixed;
+        position: relative;
+        bottom: 68px;
+        width: 100%;
+        padding-left: 40px;
+        background-color: #0F1922;
+    }
+}

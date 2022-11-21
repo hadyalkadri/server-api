@@ -1,0 +1,17 @@
+[
+    {
+      "id": 1,
+      "skill": "Front-end Web Development",
+      "skillset": "HTML, CSS, JS, and React.js"
+    },
+    {
+      "id": 2,
+      "skill": "Back-end Web Development",
+      "skillset": "Node.js, Express.js and Python"
+    },
+    {
+      "id": 3,
+      "skill": "Music Production",
+      "skillset": "Arrange, mix and master"
+    }
+]
