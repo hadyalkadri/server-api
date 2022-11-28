@@ -18,18 +18,18 @@ const port = process.env.PORT || 3002;
 const app = express();
 app.use(cors());
 
-<<<<<<< HEAD
+
 app.use(express.static(path.join(__dirname + "/public")))
 app.use(express.static("/public"))
 app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, '/public', 'index.html'))
 })
-=======
+
 //app.use(express.static(path.join(__dirname + "/public")))
 //app.get("*", (req, res) => {
 //    res.sendFile(path.join(__dirname, '/public', 'index.html'))
 //})
->>>>>>> 8f59d7b5a1c012965b37c19b9a2f121a17b67e8e
+
 
 // for parsing form data in format x--www....
 app.use(bodyParser.urlencoded({ extended: false }));
