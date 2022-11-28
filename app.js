@@ -20,6 +20,7 @@ const app = express();
 app.use(cors());
 
 app.use(express.static(path.join(__dirname + "/public")))
+app.use(express.static("/public"))
 app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, '/public', 'index.html'))
 })
@@ -31,16 +32,16 @@ app.use(bodyParser.json());
 
 
 
-app.get('/my_skills', (req, res) => {
-    res.sendFile('files/sample.json', {root: __dirname});
-})
+// app.get('/my_skills', (req, res) => {
+//     res.sendFile('files/sample.json', {root: __dirname});
+// })
 
-app.get('/about', (req, res) => {
-    res.sendFile('files/about_me.json', {root: __dirname})
-})
-app.get('/experience', (req, res) => {
-    res.sendFile('files/experience.json', {root: __dirname})
-})
+// app.get('/about', (req, res) => {
+//     res.sendFile('files/about_me.json', {root: __dirname})
+// })
+// app.get('/experience', (req, res) => {
+//     res.sendFile('files/experience.json', {root: __dirname})
+// })
 
 //import form data
 
