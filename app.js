@@ -2,7 +2,6 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path')
 const bodyParser = require('body-parser');
-const { send } = require('@emailjs/browser');
 const mongoose = require('mongoose');
 const dataForm = require('./models/data')
 require('dotenv/config');
